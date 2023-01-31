@@ -1,0 +1,97 @@
+:root {
+    --length-of-shift: 0px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    width: 480px;
+}
+
+.carousel-wrapper {
+    position: relative;
+    width: 100vw;
+    height: 256px;
+    overflow: hidden;
+}
+
+.swiper-wrapper {
+    display: flex;
+    transition-duration: 300ms;
+    transform: translateX(var(--length-of-shift));
+}
+
+.swiper-slide {
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.swiper-pagination {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 21px;
+    top: 90%;
+    z-index: 1;
+}
+
+.swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    margin: 0 7px;
+    background-color: #FFF;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #F37A01;
+}
+
+.swiper-button {
+    position: absolute;
+    top: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: none;
+    background-color: #000;
+    opacity: 0;
+    z-index: 1;
+    cursor: pointer;
+    transition: .15s ease;
+}
+
+.swiper-button-prev {
+    left: 18px;
+}
+
+.swiper-button-next {
+    right: 18px;
+}
+
+.carousel-wrapper:hover .swiper-button {
+    opacity: .35;
+}
+
+.swiper-button:hover {
+    opacity: .55 !important;
+}
+
+.fa-solid {
+    font-size: 30px;
+    color: #FFF;
+}
